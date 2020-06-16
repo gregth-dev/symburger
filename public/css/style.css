@@ -1,0 +1,166 @@
+/* 
+PARAMS :
+font-family: 'Fredoka One', cursive;
+
+*/
+
+/* 
+GENERAL
+*/
+
+.container-fluid {
+    text-align: center;
+}
+
+.fas {
+    color: yellow;
+}
+
+body {
+    background-image: url("../images/bg.png");
+    font-family: 'Fredoka One', cursive;
+}
+
+.titre {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.text-logo a {
+    padding-top: 50px;
+    color: red;
+    text-shadow: 2px 1px 1px yellow;
+    text-decoration: none;
+}
+
+#logo-accueil {
+    margin-top: 250px;
+}
+
+#logo-accueil .fa-cutlery {
+    font-size: 60px;
+    color: yellow;
+}
+
+#logo-accueil a {
+    color: red;
+    text-shadow: 2px 1px 1px yellow;
+    font-size: 70px;
+    text-decoration: none;
+}
+
+.error-message {
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.error-message a {
+    color: white;
+    text-decoration: none;
+}
+
+#info-connexion {
+    color: white;
+}
+
+/* 
+MENU
+*/
+
+.titre-menu {
+    color: red;
+    text-shadow: 2px 1px 1px black;
+    text-align: center;
+}
+
+.navbar-nav {
+    text-align: center;
+    margin: auto 30px;
+}
+
+.nav-item:hover {
+    background: white;
+    border-radius: 3px;
+}
+
+.nav-item a {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: auto 15px;
+    text-decoration: none;
+    color: red;
+    text-shadow: 2px 1px 1px yellow;
+    font-weight: bold;
+}
+
+/* 
+CARD
+*/
+
+.card {
+    margin: 15px auto;
+}
+
+.button-command {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.prix {
+    font-size: 20px;
+    font-weight: bold;
+    width: 70px;
+    text-align: center;
+    background: rgb(56, 238, 56);
+    box-shadow: 3px 3px 1px black;
+    border-radius: 5px;
+    position: absolute;
+    right: -20px;
+    top: 20px;
+}
+
+.description {
+    text-align: center;
+}
+
+/* 
+Gestion Items
+*/
+
+.select-categorie {
+    text-align: center;
+}
+
+/* FORM AUTH */
+
+#formAuth {
+    margin: 50px auto;
+}
+
+#formAuth h1 {
+    color: #fff;
+}
+
+#formAuth input {
+    margin: 10px 0;
+}
+
+#formAuth p {
+    color: #fff;
+    margin: 10px 0;
+}
+
+/* MAX 400px */
+
+@media screen and (max-width:400px) {
+    #logo-accueil .fa-cutlery {
+        font-size: 30px;
+    }
+    #logo-accueil a {
+        font-size: 40px;
+    }
+}
+
+/* FIN MAX 1000px */
