@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	- Préssentation des Produits
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row mt-5">
+			{% for product in category.products %}
+				<div class="col-sm-12 col-md-4">
+					<div class="card my-3">
+						<img src="{{asset('images/' ~ product.image)}}" alt="{{product.name}}" class="card-img-top">
+						<div class="card-body">
+							<h3 class="titre-menu">{{product.name}}</h3>
+							<div class="card-title prix">{{product.price | number_format(2, ',', ' ')}}
+								€</div>
+							<div class="card-text description">{{product.description}}</div>
+							<div class="text-center mt-2">
+								<a href="#" class="btn btn-primary">
+									<i class="fas fa-shopping-basket"></i>
+									Commander</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

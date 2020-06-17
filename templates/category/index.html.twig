@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	- Catégories
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row mt-5">
+			{% for category in categories %}
+				<div class="card bg-dark mx-3" style="width: 18rem;">
+					<img src="{{asset('images/' ~ category.image)}}" class="card-img-top" alt="...">
+					<div class="card-body text-light">
+						<h5 class="card-title">{{category.name}}</h5>
+						<p class="card-text">{{category.description}}</p>
+						<div class="text-center">
+							<a href="{{path('category_show', {'id':category.id})}}" class="btn btn-primary">Voir
+								{{category.name}}</a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

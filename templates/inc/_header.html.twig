@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-	<a class="navbar-brand" href="{{path('admin_category_index')}}">
+	<a class="navbar-brand" href="{{path('homePage')}}">
 		<i class="fas fa-utensils"></i>
 		SymBurger
 		<i class="fas fa-utensils"></i>
@@ -12,25 +12,12 @@
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="#">Nos menus
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Nos burgers</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Nos snacks</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Nos salades</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Nos boissons</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Nos desserts</a>
-			</li>
+			{% for category in categories %}
+				<li class="nav-item">
+					<a class="nav-link" href="{{path('category_show', {'id':category.id})}}">{{category.name}}
+					</a>
+				</li>
+			{% endfor %}
 		</ul>
 	</div>
 </nav>
