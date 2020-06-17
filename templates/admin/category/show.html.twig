@@ -1,0 +1,30 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	- Administration des Produits
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			{% for product in category.products %}
+				<div class="col-sm-12 col-md-4">
+					<div class="card my-3">
+						<img src="{{asset('images/' ~ product.image)}}" alt="{{product.name}}" class="card-img-top">
+						<div class="card-body">
+							<h3 class="titre-menu">{{product.name}}</h3>
+							<div class="card-title prix">{{product.price | number_format(2, ',', ' ')}}
+								€</div>
+							<div class="card-text description">{{product.description}}</div>
+							<div class="text-center mt-2">
+								<a href="{{path('admin_product_edit', {'id':product.id})}}" class="btn btn-primary">Modifier le produit</a>
+								{{ include('admin/product/_delete_form.html.twig') }}
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

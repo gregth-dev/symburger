@@ -8,22 +8,21 @@ font-family: 'Fredoka One', cursive;
 GENERAL
 */
 
-.container-fluid {
-    text-align: center;
+#homepage {
+    min-height: 30rem;
 }
 
 .fas {
     color: yellow;
 }
 
-body {
+body, .bg-dark {
     background-image: url("../images/bg.png");
     font-family: 'Fredoka One', cursive;
 }
 
-.titre {
-    text-align: center;
-    padding-top: 50px;
+.navbar .navbar-expand-lg {
+    background-color: black;
 }
 
 .text-logo a {
@@ -33,36 +32,11 @@ body {
     text-decoration: none;
 }
 
-#logo-accueil {
-    margin-top: 250px;
-}
-
-#logo-accueil .fa-cutlery {
-    font-size: 60px;
-    color: yellow;
-}
-
 #logo-accueil a {
     color: red;
     text-shadow: 2px 1px 1px yellow;
     font-size: 70px;
     text-decoration: none;
-}
-
-.error-message {
-    margin-top: 50px;
-    font-size: 20px;
-    text-align: center;
-    color: white;
-}
-
-.error-message a {
-    color: white;
-    text-decoration: none;
-}
-
-#info-connexion {
-    color: white;
 }
 
 /* 
@@ -85,22 +59,41 @@ MENU
     border-radius: 3px;
 }
 
-.nav-item a {
-    font-size: 20px;
+.navbar-light .navbar-brand {
+    font-size: 22px;
     letter-spacing: 2px;
-    margin: auto 15px;
-    text-decoration: none;
     color: red;
     text-shadow: 2px 1px 1px yellow;
-    font-weight: bold;
+}
+
+.navbar-light .navbar-brand:hover {
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: red;
+    text-shadow: 2px 1px 1px yellow;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: red;
+    text-shadow: 2px 1px 1px yellow;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: red;
+    text-shadow: 2px 1px 1px yellow;
 }
 
 /* 
 CARD
 */
 
-.card {
-    margin: 15px auto;
+.card-img-top img {
+    width: 250px;
+    height: 250px;
 }
 
 .button-command {

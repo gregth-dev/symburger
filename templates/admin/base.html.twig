@@ -16,7 +16,7 @@
 	</head>
 	<body>
 		{% if app.request.get('_route') != 'homePage' %}
-			{% include "inc/_header.html.twig" %}
+			{% include "admin/inc/_header.html.twig" %}
 		{% endif %}
 		{% block body %}{% endblock %}
 		{% block javascripts %}

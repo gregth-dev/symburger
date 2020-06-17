@@ -5,12 +5,16 @@
 
 {% block body %}
 	<div class="container-fluid">
-		<h1 id="logo-accueil">
-			<a href="#">
-				<i class="fas fa-utensils"></i>
-				SymBurger
-				<i class="fas fa-utensils"></i>
-			</a>
-		</h1>
+		<div class="row text-center align-items-center" id="homepage">
+			<div class="col">
+				<h1 id="logo-accueil">
+					<a href="{{path('category_index')}}">
+						<i class="fas fa-utensils"></i>
+						SymBurger
+						<i class="fas fa-utensils"></i>
+					</a>
+				</h1>
+			</div>
+		</div>
 	</div>
 {% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	- Modifier une catégorie
+{% endblock %}
+
+{% block body %}
+	<div class="container text-light">
+		<h1 class="my-5 text-center">Modifier une catégorie</h1>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				{{ include('admin/category/_form.html.twig', {'button_label':'Modifier la catégorie'}) }}
+
+
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

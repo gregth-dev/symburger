@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+	<a class="navbar-brand" href="{{path('homePage')}}">
+		<i class="fas fa-utensils"></i>
+		SymBurger
+		<i class="fas fa-utensils"></i>
+	</a>
+
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Catégories
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="{{path('admin_category_index')}}">Toutes les catégories</a>
+					<a class="dropdown-item" href="{{path('admin_category_new')}}">Ajouter une catégorie</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Mon compte</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Produits
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="{{path('admin_product_index')}}">Tous les produits</a>
+					<div class="dropdown-divider"></div>
+					{% for category in categories %}
+						<a class="dropdown-item" href="{{path('admin_category_show', {'id':category.id})}}">{{category.name}}</a>
+					{% endfor %}
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="{{path('admin_product_new')}}">Ajouter un produit</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Mon compte</a>
+				</div>
+			</li>
+		</ul>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Connexion</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+{% for label, messages in app.flashes %}
+	<div class="container">
+		<div class="alert alert-{{ label }} text-center">
+			{% for message in messages %}
+				<p>
+					<strong>{{ message }}</strong>
+				</p>
+			{% endfor %}
+		</div>
+	</div>
+{% endfor %}

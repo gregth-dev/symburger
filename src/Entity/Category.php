@@ -39,6 +39,18 @@ class Category
      */
     private $products;
 
+    /**
+     * Tableau de catégorie
+     *
+     * @var Collection
+     */
+    private $categories;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $categoryOrder;
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
@@ -78,7 +90,7 @@ class Category
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 
@@ -112,6 +124,41 @@ class Category
                 $product->setCategory(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCategoryOrder(): ?int
+    {
+        return $this->categoryOrder;
+    }
+
+    public function setCategoryOrder(int $categoryOrder): self
+    {
+        $this->categoryOrder = $categoryOrder;
+
+        return $this;
+    }
+
+    /**
+     * Get tableau de catégorie
+     *
+     * @return  Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Tableau de categorie
+     *
+     * @param CategoryRepository $categoryRepository
+     * @return self
+     */
+    public function setCategories(CategoryRepository $categoryRepository)
+    {
+        $this->categories = $categoryRepository->findAll();
 
         return $this;
     }

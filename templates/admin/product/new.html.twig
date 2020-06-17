@@ -1,0 +1,17 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	- Ajouter un produit
+{% endblock %}
+
+{% block body %}
+	<div class="container text-light">
+		<h1 class="my-5 text-center">Ajouter un produit</h1>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				{{ include('admin/product/_form.html.twig') }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

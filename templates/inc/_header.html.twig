@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+	<a class="navbar-brand" href="{{path('admin_category_index')}}">
+		<i class="fas fa-utensils"></i>
+		SymBurger
+		<i class="fas fa-utensils"></i>
+	</a>
+
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Nos menus
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Nos burgers</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Nos snacks</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Nos salades</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Nos boissons</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Nos desserts</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+{% for label, messages in app.flashes %}
+	<div class="container">
+		<div class="alert alert-{{ label }} text-center">
+			{% for message in messages %}
+				<p>
+					<strong>{{ message }}</strong>
+				</p>
+			{% endfor %}
+		</div>
+	</div>
+{% endfor %}
