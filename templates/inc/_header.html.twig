@@ -11,13 +11,18 @@
 	</button>
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-			{% for category in categories %}
-				<li class="nav-item">
-					<a class="nav-link" href="{{path('category_show', {'id':category.id})}}">{{category.name}}
-					</a>
-				</li>
-			{% endfor %}
+		{% if categories is defined %}
+			<ul class="navbar-nav mr-auto">
+				{% for category in categories %}
+					<li class="nav-item">
+						<a class="nav-link" href="{{path('category_show', {'id':category.id})}}">{{category.name}}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		<ul class="navbar-nav">
+			{{ include('inc/_connexion.html.twig') }}
 		</ul>
 	</div>
 </nav>

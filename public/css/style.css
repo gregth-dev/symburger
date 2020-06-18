@@ -32,7 +32,7 @@ body, .bg-dark {
     text-decoration: none;
 }
 
-#logo-accueil a {
+.logo-accueil {
     color: red;
     text-shadow: 2px 1px 1px yellow;
     font-size: 70px;
